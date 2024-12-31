@@ -1,21 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+   
+    --font-family: "Zain", sans-serif ;
+    --main-color: #173459 ;
+    --container-color : #F8F8F8 ;
+    --bolder-color : ;
+    --shadow: rgba(214, 219, 224, 0.2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+    
+    --rating-color: #F8D442;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+[dir="rtl"] body {
+    direction: rtl;
+    font-family: "Zain", sans-serif !important;
   }
+  
+
+
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-align: justify;
+    
+    
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    direction: ltr;
+font-family: 'Zain', sans-serif !important;
+    font-family: var(--font-family) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+.rating-color {
+    color: var(--rating-color);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-main {
+    color: var(--container-color);
+}
+
+
+
+a {
+    text-decoration: none !important ;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+   }
+   
+  ::-webkit-scrollbar-track {
+    border: 7px solid var(--shadow);
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background-color: white;
+    }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--bolder-color);
+    border-radius: 2px;
+  }
+   
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-colorbg-color);
+  }
+   
+  /* for Firefox */
+   html {scrollbar-color: var(--bolder-color) #3d4a59;} 
+
